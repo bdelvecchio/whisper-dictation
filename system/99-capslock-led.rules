@@ -1,0 +1,1 @@
+ACTION=="add", SUBSYSTEM=="leds", KERNEL=="*::capslock", RUN+="/bin/chmod 0666 %S%p/brightness", RUN+="/bin/sh -c 'echo none > %S%p/trigger'"
