@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 320px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      padding: 16px;
+      color: #1a1a1a;
+      background: #fafafa;
+    }
+    h1 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .status {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ccc;
+    }
+    .status.ok { background: #22c55e; }
+    .status.err { background: #ef4444; }
+    label {
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      color: #666;
+      margin-bottom: 4px;
+      margin-top: 12px;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 13px;
+      background: #fff;
+      outline: none;
+    }
+    input:focus, select:focus { border-color: #3b82f6; }
+    .actions {
+      margin-top: 16px;
+      display: flex;
+      gap: 8px;
+    }
+    button {
+      flex: 1;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .btn-primary { background: #3b82f6; color: #fff; }
+    .btn-primary:hover { background: #2563eb; }
+    .btn-secondary { background: #e5e7eb; color: #374151; }
+    .btn-secondary:hover { background: #d1d5db; }
+    .hint {
+      margin-top: 12px;
+      font-size: 11px;
+      color: #999;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>
+    <span>Whisper Dictation</span>
+    <span id="status" class="status" title="Checking..."></span>
+  </h1>
+
+  <label for="endpoint">Whisper Endpoint</label>
+  <input id="endpoint" type="url" placeholder="http://127.0.0.1:2022">
+
+  <label for="language">Language</label>
+  <select id="language">
+    <option value="">Auto-detect</option>
+    <option value="en">English</option>
+    <option value="es">Spanish</option>
+    <option value="fr">French</option>
+    <option value="de">German</option>
+    <option value="ja">Japanese</option>
+    <option value="zh">Chinese</option>
+    <option value="pt">Portuguese</option>
+    <option value="it">Italian</option>
+  </select>
+
+  <div class="actions">
+    <button id="save" class="btn-primary">Save</button>
+    <button id="test" class="btn-secondary">Test</button>
+  </div>
+
+  <p class="hint">Press <kbd>Caps Lock</kbd> to toggle dictation</p>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "name": "com.whisper_dictation.led",
+  "description": "Caps Lock LED control for Whisper Dictation",
+  "path": "/home/bdelvecchio/projects/whisper-dictation/native-host/led-control.py",
+  "type": "stdio",
+  "allowed_origins": ["chrome-extension://EXTENSION_ID_PLACEHOLDER/"]
+}
