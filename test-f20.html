@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>F20 Key Test</title></head>
+<body>
+  <h2>F20 Key Test</h2>
+  <p>Press Caps Lock. Events will appear below:</p>
+  <textarea id="input" rows="3" cols="50" placeholder="Click here first, then press Caps Lock"></textarea>
+  <pre id="log" style="background:#111;color:#0f0;padding:12px;min-height:200px;font-size:13px;"></pre>
+  <script>
+    const log = document.getElementById('log');
+    function addLog(msg) {
+      log.textContent = msg + '\n' + log.textContent;
+    }
+    document.addEventListener('keydown', (e) => {
+      addLog(`keydown: key="${e.key}" code="${e.code}" keyCode=${e.keyCode} which=${e.which}`);
+    }, true);
+    document.addEventListener('keyup', (e) => {
+      addLog(`keyup:   key="${e.key}" code="${e.code}" keyCode=${e.keyCode} which=${e.which}`);
+    }, true);
+    addLog('Waiting for key events...');
+  </script>
+</body>
+</html>

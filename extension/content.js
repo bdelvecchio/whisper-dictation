@@ -165,10 +165,10 @@
   }
 
   document.addEventListener("keydown", (e) => {
-    if (e.key === "F20") {
+    if (e.key === "ScrollLock") {
       e.preventDefault();
       e.stopPropagation();
-      console.log(TAG, "F20 pressed, recording:", recording, "pending:", pending);
+      console.log(TAG, "ScrollLock (Caps Lock) pressed, recording:", recording, "pending:", pending);
       if (recording) {
         stopRecording();
       } else {
@@ -177,5 +177,5 @@
     }
   }, true);
 
-  console.log(TAG, "Content script loaded, listening for F20 (Caps Lock)");
+  console.log(TAG, "Content script loaded, listening for ScrollLock (Caps Lock)");
 })();
