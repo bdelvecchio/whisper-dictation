@@ -32,6 +32,23 @@ echo "Applying LED permissions for current session..."
 echo none | sudo tee "$LED_PATH/trigger" > /dev/null
 sudo chmod 0666 "$LED_PATH/brightness"
 
+echo "Mapping X11 keycode 202 → F20..."
+xmodmap -e "keycode 202 = F20" 2>/dev/null || true
+
+AUTOSTART_DIR="$HOME/.config/autostart"
+DESKTOP_FILE="$AUTOSTART_DIR/whisper-dictation-xmodmap.desktop"
+mkdir -p "$AUTOSTART_DIR"
+cat > "$DESKTOP_FILE" << 'XEOF'
+[Desktop Entry]
+Type=Application
+Name=Whisper Dictation F20 Keymap
+Exec=sh -c "sleep 2 && xmodmap -e 'keycode 202 = F20'"
+Hidden=false
+NoDisplay=true
+X-GNOME-Autostart-enabled=true
+XEOF
+echo "Added autostart entry for X11 F20 mapping."
+
 echo "Testing LED control..."
 echo 1 > "$LED_PATH/brightness"
 sleep 0.5

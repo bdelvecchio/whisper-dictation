@@ -47,9 +47,15 @@ async function handleTranscribe(dataUrl) {
 }
 
 function setLed(on) {
-  try {
-    chrome.runtime.sendNativeMessage(NATIVE_HOST, { led: on ? 1 : 0 });
-  } catch {
-    // Native host may not be installed yet; fail silently
-  }
+  chrome.runtime.sendNativeMessage(
+    NATIVE_HOST,
+    { led: on ? 1 : 0 },
+    (response) => {
+      if (chrome.runtime.lastError) {
+        console.warn("[Whisper Dictation] LED native host error:", chrome.runtime.lastError.message);
+        return;
+      }
+      console.log("[Whisper Dictation] LED:", on ? "ON" : "OFF", response);
+    }
+  );
 }
