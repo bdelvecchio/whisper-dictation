@@ -1,0 +1,39 @@
+native-host/led-control.py
+  14a109b872e9348b 1-44
+native-host/install-native-host.sh
+  14a109b872e9348b 1-44
+README.md
+  14a109b872e9348b 1-85
+extension/popup.html
+  14a109b872e9348b 1-106
+extension/popup.js
+  14a109b872e9348b 1-50
+extension/content.js
+  14a109b872e9348b 1-130
+extension/background.js
+  14a109b872e9348b 1-55
+extension/manifest.json
+  14a109b872e9348b 1-37
+native-host/com.whisper_dictation.led.json
+  14a109b872e9348b 1-7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.17",
+  "base_commit_sha": "a259c51f74f9a21ee8450004e04d4ec9ad8eb28c",
+  "prompts": {
+    "14a109b872e9348b": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "fce3d69a-ca92-4181-8f2a-4eddc6c6ef4d",
+        "model": "claude-4.6-opus-high-thinking"
+      },
+      "human_author": "Brian Del Vecchio <bdelvecchio@wasabi.com>",
+      "messages": [],
+      "total_additions": 596,
+      "total_deletions": 0,
+      "accepted_lines": 596,
+      "overriden_lines": 0
+    }
+  }
+}
