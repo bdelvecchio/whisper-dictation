@@ -1,0 +1,27 @@
+system/install-system.sh
+  14a109b872e9348b 35-51
+extension/content.js
+  14a109b872e9348b 4-5,7,11-12,37-38,50-61,64-70,75-79,92-93,95,97,100,106,111-114,116-117,120-122,132,135,137,139,146,154-157,161-163,171,179-180
+extension/background.js
+  14a109b872e9348b 50-60
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.17",
+  "base_commit_sha": "f267973e945c3a2b125b4f3421630be5840913db",
+  "prompts": {
+    "14a109b872e9348b": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "fce3d69a-ca92-4181-8f2a-4eddc6c6ef4d",
+        "model": "claude-4.6-opus-high-thinking"
+      },
+      "human_author": "Brian Del Vecchio <bdelvecchio@wasabi.com>",
+      "messages": [],
+      "total_additions": 89,
+      "total_deletions": 15,
+      "accepted_lines": 89,
+      "overriden_lines": 0
+    }
+  }
+}
