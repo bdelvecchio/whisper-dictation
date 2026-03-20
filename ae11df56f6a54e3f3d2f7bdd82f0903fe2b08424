@@ -1,0 +1,27 @@
+system/99-capslock-led.rules
+  14a109b872e9348b 1
+system/keyd-default.conf
+  14a109b872e9348b 1-5
+system/install-system.sh
+  14a109b872e9348b 1-43
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.17",
+  "base_commit_sha": "ae11df56f6a54e3f3d2f7bdd82f0903fe2b08424",
+  "prompts": {
+    "14a109b872e9348b": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "fce3d69a-ca92-4181-8f2a-4eddc6c6ef4d",
+        "model": "claude-4.6-opus-high-thinking"
+      },
+      "human_author": "Brian Del Vecchio <bdelvecchio@wasabi.com>",
+      "messages": [],
+      "total_additions": 52,
+      "total_deletions": 3,
+      "accepted_lines": 49,
+      "overriden_lines": 0
+    }
+  }
+}
